@@ -3,12 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
-// The module class can have any name you like, but it is wise to name
-// it ___Module, because the TypeScript type system cannot yet express
-// a type for "the class must have decorator Abc".
+import { PayrollSearchComponent } from './payroll/payroll-search.component';
+import { SearchBoxComponent } from './search/search-box.component';//import to put in declarations
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [//include here all the components names(class) to show(selector) in the html
+    AppComponent,
+    SearchBoxComponent,
+    PayrollSearchComponent
+
+  ],
   imports: [BrowserModule],
   bootstrap: [AppComponent]
 })

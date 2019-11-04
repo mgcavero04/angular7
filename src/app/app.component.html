@@ -1,23 +1,43 @@
-<p>Hello, {{ employee }}.</p>
+<div class="two-across">
+  <section class="card">
+    <div class="card-content">
+      <span class="card-title">Time Clock</span>
+      <p>Hello, {{ name }}</p>
+      <p>
+        <strong>{{ message }}</strong>
+      </p>
+      <p>
+        Managers, don't forget to hold shift while clocking in!
+      </p>
+    </div>
+    <div class="card-action">
+      <button class="btn" (click)="clockIn($event)">Clock In</button>
+      &nbsp;
+      <button class="btn" (click)="clockOut()">Clock Out</button>
+    </div>
+  </section>
 
-<p>Days worked: <span [textContent]="daysWorked"></span></p>
+  <section class="card">
+    <div class="card-content">
+      <span class="card-title">Upcoming Schedule</span>
+      <div class="time-block" (mouseleave)="clearSchedule()">
+        <div class="day-0" (mouseover)="showSchedule('M')">M</div>
+        <div class="day-1" (mouseover)="showSchedule('T')">T</div>
+        <div class="day-2" (mouseover)="showSchedule('W')">W</div>
+        <div class="day-3" (mouseover)="showSchedule('R')">R</div>
+        <div class="day-4" (mouseover)="showSchedule('F')">F</div>
+      </div>
+      <div>
+        {{ currentSchedule }}
+      </div>
 
-<p>
-  Days until next vacation: <strong>{{ 365 - daysWorked }}</strong>
-</p>
 
-<p>
-  Thank you for being a dedicated employee of {{ company.name + '!' }}
-</p>
+        <div (click)="showMessage1()">Click here to see message1: {{ newMessage1 }}</div>
+        <div>
+          <input type="text" (focus)="showMessage2()" value="{{ newMessage2 }}">Type to see message2
+        </div>
+    </div>
+  </section>
+  <payroll-search></payroll-search>
 
-<img
-  [src]="employeeOfTheWeek.picture"
-  [alt]="employeeOfTheWeek.name"
-/>
-
-<p
-  [textContent]="
-    'Employee of the week is ' + employeeOfTheWeek.name + '!!'
-  "
-></p>
-
+</div>
