@@ -1,4 +1,4 @@
-example: data-binding
+example: small web app example
 
 
 git clone https://github.com/mgcavero04/angular7.git
