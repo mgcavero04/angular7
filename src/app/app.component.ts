@@ -5,7 +5,7 @@ import { scheduleMap } from './app.constants';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html'
- //template: `<payroll-search></payroll-search>`
+ // template: `<payroll-search></payroll-search>`
  })
 export class AppComponent {
   name = 'John Doe';

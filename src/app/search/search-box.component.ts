@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-//this component will be included in payroll
+// this component will be included in payroll
 @Component({
   selector: 'search-box',
   template: `
