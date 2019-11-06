@@ -7,5 +7,5 @@ example: small ngular web app example
 -npm start
 
 
--Then browse to [http://localhost:4200]
+Then browse to [http://localhost:4200]
 
