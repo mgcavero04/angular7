@@ -1,10 +1,11 @@
-example: small web app example
+example: small angular web app example
 
 
-git clone https://github.com/mgcavero04/angular7.git
-cd data-binding
-npm install
-npm start
-```
+-git clone https://github.com/mgcavero04/angular7.git<br/>
+-cd data-binding<br/>
+-npm install<br/>
+-npm start<br/>
 
-Then browse to [http://localhost:4200](http://localhost:4200).
+
+Then browse to [http://localhost:4200]
+
