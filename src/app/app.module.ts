@@ -4,16 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 import { PayrollSearchComponent } from './payroll/payroll-search.component';
-import { SearchBoxComponent } from './search/search-box.component'; // import to put in declarations
 
+import { SharedModule } from './shared/shared.module'; /*104-4*/
 @NgModule({
   declarations: [ // include here all the components names(class) to show(selector) in the html
-    AppComponent,
-    SearchBoxComponent,
-    PayrollSearchComponent
-
-  ],
-  imports: [BrowserModule],
+    AppComponent, PayrollSearchComponent],
+    imports: [SharedModule /*104-4*/, BrowserModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

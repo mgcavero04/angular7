@@ -4,9 +4,7 @@ import { scheduleMap } from './app.constants';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
- // template: `<payroll-search></payroll-search>`
- })
+  templateUrl: './app.component.html'})
 export class AppComponent {
   name = 'John Doe';
   message = 'Please Clock In';

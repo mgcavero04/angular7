@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
       <div class="card-content">
         <span class="card-title">Payroll Functionality</span>
         <div>Search for Employee Payroll Records</div>
-        <search-box></search-box>
+
       </div>
     </div>
   `
