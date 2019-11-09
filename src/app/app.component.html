@@ -1,44 +1,30 @@
-<div class="two-across">
-  <section class="card">
-    <div class="card-content">
-      <span class="card-title">Time Clock</span>
-      <p>Hello, {{ name }}</p>
-      <p>
-        <strong>{{ message }}</strong>
-      </p>
-      <p>
-        Managers, don't forget to hold shift while clocking in!
-      </p>
-    </div>
-    <div class="card-action">
-      <button class="btn" (click)="clockIn($event)">Clock In</button>
-      &nbsp;
-      <button class="btn" (click)="clockOut()">Clock Out</button>
-    </div>
-  </section>
+<!--<div class="two-across"> -->
+  <div>
 
-  <section class="card">
-    <div class="card-content">
-      <span class="card-title">Upcoming Schedule</span>
-      <div class="time-block" (mouseleave)="clearSchedule()">
-        <div class="day-0" (mouseover)="showSchedule('M')">M</div>
-        <div class="day-1" (mouseover)="showSchedule('T')">T</div>
-        <div class="day-2" (mouseover)="showSchedule('W')">W</div>
-        <div class="day-3" (mouseover)="showSchedule('R')">R</div>
-        <div class="day-4" (mouseover)="showSchedule('F')">F</div>
+  <header style="margin-top: 5px;">
+    <nav>
+      <div class="nav-wrapper">
+        <ul>
+          <li routerLinkActive="green-background">
+            <a routerLink="/payroll">Payroll</a>
+          </li>
+          <li routerLinkActive="green-background">
+            <a routerLink="/pavers">Pavers</a>
+          </li>
+        </ul>
       </div>
-      <div>
-        {{ currentSchedule }}
-      </div>
+    </nav>
+  </header>
+  <div>
+    <router-outlet></router-outlet>
+    <div>Fake Copyright ABC 2057</div>
+  </div>
 
 
-        <div (click)="showMessage1()">Click here to see message1: {{ newMessage1 }}</div>
-        <div>
-          <input type="text" (focus)="showMessage2()" value="{{ newMessage2 }}">Type to see message2
-        </div>
-    </div>
-  </section>
-  <payroll-search></payroll-search>
   <shared-box></shared-box><!-- 104-5 -->
+
+
+
+
 
 </div>
