@@ -19,7 +19,13 @@ const routes: Routes = [
     path: 'payroll',
     loadChildren: () =>
       import('./payroll/payroll.module').then(m => m.PayrollModule)
+  },
+  {
+    path: 'walls',
+    loadChildren: () =>
+      import('./walls/walls.module').then(m => m.WallsModule)
   }
+
 ];
 
 const config: ExtraOptions = {
