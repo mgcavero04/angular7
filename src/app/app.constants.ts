@@ -5,3 +5,13 @@ export const scheduleMap: Record<string, string> = {
   R: '9:00 - 3:30',
   F: '9:00 - 5:00'
 };
+
+export interface Video {
+  name: string; roles: string[];
+}
+
+export interface View {
+  age: number;
+  region: string;
+  date: string;
+}

@@ -13,8 +13,10 @@
       <ul class="collection">
         <li
           class="collection-item"
-          *ngFor="let employee of employeeList"
-        >
+          *ngFor="let employee of employees"
+          (click)="selectVideo(employee)"
+          [class.hilite]="employee === selectedList"
+        ><!--204-->
           <strong>{{ employee.name }}</strong>
           <div *ngFor="let role of employee.roles; index as i"><!--loop-->
             <span *ngIf="showInactiveRoles || i === 0"><!-- conditional-->
@@ -23,6 +25,15 @@
           </div>
         </li>
       </ul>
+    </div>
+  </section>
+  <section class="card">
+    <div class="card-content">
+      <div class="card-title">
+        {{selectedList.name}}
+        <app-wallschild></app-wallschild>
+
+      </div>
     </div>
   </section>
 </div>

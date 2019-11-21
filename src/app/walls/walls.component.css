@@ -1,0 +1,11 @@
+.hilite {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+.collection-item {
+  cursor: pointer !important;
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
