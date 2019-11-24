@@ -8,10 +8,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module'; /*104-4*/
 
 
+const directives: any[] = [
+  AppComponent,
+
+];
+
 @NgModule({
+
   declarations: [ // include here all the components names(class) to show(selector) in the html
-    AppComponent],
+    AppComponent, directives],
     imports: [SharedModule /*104-4*/, BrowserModule, AppRoutingModule],
   bootstrap: [AppComponent]
 })
+
+
+
 export class AppModule {}

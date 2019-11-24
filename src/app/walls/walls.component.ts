@@ -1,5 +1,8 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Video } from '../app.constants';
+import { Employees } from '../app.constants';
+
+
 
 @Component({
   selector: 'walls',
@@ -7,47 +10,23 @@ import { Video } from '../app.constants';
   styleUrls: ['./walls.component.css']
 })
 export class WallsComponent {
-  employees = [
-    {
-      name: 'Cynthia Cunningham',
-      roles: ['moderator', 'infrastructure', 'firmware']
-    },
-    {
-      name: 'Peter Clark',
-      roles: ['contingency', 'protocol'] },
-    {
-      name: 'Theresa Soto',
-      roles: ['implementation'] },
-    {
-      name: 'Russell Fisher',
-      roles: ['implementation', 'application']
-    },
-    {
-      name: 'Elizabeth Hudson',
-      roles: ['instruction set design'] },
-    {
-      name: 'Heather Spencer',
-      roles: ['moderator'] },
-    {
-      name: 'Barbara Tran',
-      roles: ['protocol'] },
-    {
-      name: 'Julia Anderson',
-      roles: ['instruction set design', 'implementation']
-    }
-  ];
+
   @Input() videos: Video[] = [];
   @Output() videoSelected = new EventEmitter<Video>();
 
+  empleados = Employees;
   selectedVideo: Video;
-  selectedList: Video;
-  showInactiveRoles = true;
-  //name: string;
 
   selectVideo(video: Video) {
-    console.log(video);
-    this.selectedList = video;
-    }
+    this.selectedVideo = video;
+    console.log('this.selectedVideo:', this.selectedVideo);
+     this.videoSelected.emit(video);
+
+
+
+
+  }
+
 
 
 
