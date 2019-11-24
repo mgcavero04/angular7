@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -17,7 +17,7 @@ const directives: any[] = [
 
   declarations: [ // include here all the components names(class) to show(selector) in the html
     AppComponent, directives],
-    imports: [SharedModule /*104-4*/, BrowserModule, AppRoutingModule],
+    imports: [SharedModule /*104-4*/, BrowserModule, AppRoutingModule, HttpClientModule],
   bootstrap: [AppComponent]
 })
 
