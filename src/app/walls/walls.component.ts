@@ -1,27 +1,30 @@
 import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
-import { Video } from '../app.constants';
-import { Employees } from '../app.constants';
 import { HttpClient } from '@angular/common/http';
+import {
+  Employee,
+  WallsLoaderService
+} from './walls-loader.service';
 
 const apiUrl = 'https://api.angularbootcamp.com/videos';
-interface Employee {
-  title: string;
-  author: string;
-}
+
 @Component({
   selector: 'walls',
   templateUrl: './walls.component.html',
   styleUrls: ['./walls.component.css']
 })
+  
 export class WallsComponent implements OnInit{
   //@Input() videos: Video[] = [];
   empleados: Employee[] = [];
   @Output() videoSelected = new EventEmitter<Employee>();
   selectedVideo: Employee;
-  constructor(http: HttpClient) {
-    http
+  constructor(svc: WallsLoaderService) {//301:calling the service
+    svc
+    .loadEmployees()
+    .subscribe(empleados => (this.empleados = empleados));
+    /*http
       .get<Employee[]>(apiUrl)
-      .subscribe(empleados => (this.empleados = empleados));
+      .subscribe(empleados => (this.empleados = empleados));*/ /*300: this is using http*/
 
       }
   //empleados = Employees;
