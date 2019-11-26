@@ -1,11 +1,7 @@
 import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import {
-  Employee,
-  WallsLoaderService
-} from './walls-loader.service';
-
-const apiUrl = 'https://api.angularbootcamp.com/videos';
+//import { HttpClient } from '@angular/common/http';
+import { Employee, WallsLoaderService } from './walls-loader.service';
+//const apiUrl = 'https://api.angularbootcamp.com/videos';
 
 @Component({
   selector: 'walls',
@@ -40,7 +36,3 @@ export class WallsComponent implements OnInit{
     console.log('this.selectedVideo:', this.selectedVideo);
      this.videoSelected.emit(empleado);
   }
-
-
-
-}
