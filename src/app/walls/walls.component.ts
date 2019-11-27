@@ -10,7 +10,7 @@ import { Employee, WallsLoaderService } from './walls-loader.service';
   templateUrl: './walls.component.html',
   styleUrls: ['./walls.component.css']
 })
-  
+
 export class WallsComponent implements OnInit{
   //@Input() videos: Video[] = [];
   empleados: Employee[] = [];
@@ -38,3 +38,5 @@ export class WallsComponent implements OnInit{
     console.log('this.selectedVideo:', this.selectedVideo);
      this.videoSelected.emit(empleado);
   }
+
+}
