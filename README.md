@@ -2,7 +2,7 @@ example: angular web app example
 
 
 -git clone https://github.com/mgcavero04/angular7.git<br/>
--cd data-binding<br/>
+-cd angular7<br/>
 -npm install<br/>
 -npm start<br/>
 
