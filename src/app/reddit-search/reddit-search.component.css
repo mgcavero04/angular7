@@ -7,6 +7,9 @@
 .box img {
   width: 100%;
 }
+a{
+  padding: 0px;
+}
 .search{
   color:#000;
 }

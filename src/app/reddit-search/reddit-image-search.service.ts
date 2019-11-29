@@ -7,6 +7,7 @@ import { map } from 'rxjs/operators';
 export interface RedditResult {
   thumbnail: string;
   title: string;
+  urlPicture: string;
 }
 
 @Injectable({
@@ -42,8 +43,9 @@ function translateRedditResults(items: any): RedditResult[] {
         if (data) {
           const thumbnail = data['thumbnail'];
           const title = data['title'];
+          const urlPicture = data['url'];
           if (thumbnail.startsWith('http')) {
-            return [{ thumbnail, title }];
+            return [{ thumbnail, title, urlPicture}];
           }
         }
       }
