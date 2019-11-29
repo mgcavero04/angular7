@@ -1,0 +1,22 @@
+<div>
+  <li class="search">
+      <label for="subReddit">Search reddit.com/r/</label>
+  </li>
+  <li class="search">
+    <select id="subReddit" [formControl]="subReddit">
+        <option *ngFor="let sr of subReddits" [value]="sr">
+          {{ sr }}
+        </option>
+      </select>
+
+  </li>
+  <li class="search">
+      <!--<label for="search">for images containing:</label>-->
+      <input id="search" type="text" [formControl]="search" />
+  </li>
+</div>
+<div style="position: absolute;margin-top: 100px;background:#2196F3;z-index: 101;">
+  <div class="box" *ngFor="let post of results | async">
+    <img [src]="post.thumbnail" [alt]="post.title" />
+  </div>
+</div>
