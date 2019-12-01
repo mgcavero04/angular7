@@ -1,4 +1,4 @@
-example: angular web app example
+Angular web app example
 
 
 -git clone https://github.com/mgcavero04/angular7.git<br/>
