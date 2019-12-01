@@ -1,0 +1,48 @@
+<div class="two-across">
+  <section class="card withZIndex">
+<table class="bordered unselectable">
+  <tr
+    *ngFor="let employee of list"
+    (click)="selectVideo(employee)"
+    [class.hilite]="employee === selectedVideo">
+    <td>
+      <app-wallschild [empleados]="employee"></app-wallschild>
+      <a><strong>{{ employee.author }} : </strong></a>
+    </td>
+    <td>{{employee.title}}</td>
+
+  </tr>
+</table>
+</section>
+<section class="card withZIndex">
+  <div class="card-content">
+    <div class="card-title">
+        {{selectedVideo.author}}
+    </div>
+  </div>
+</section>
+</div>
+<!--<div class="two-across">
+  <section class="card withZIndex">
+    <div class="card-content">
+
+         <ul class="collection">
+            <li class="collection-item"
+                *ngFor="let employee of empleados"
+                (click)="selectVideo(employee)"
+                [class.hilite]="employee === selectedVideo">
+                <app-wallschild [empleados]="employee"></app-wallschild>
+                <strong>{{ employee.author }} : </strong>
+                              {{employee.title}}
+            </li >
+          </ul>
+      </div>
+  </section>
+  <section class="card withZIndex">
+    <div class="card-content">
+      <div class="card-title">
+          {{selectedVideo.author}}
+      </div>
+    </div>
+  </section>
+</div>-->

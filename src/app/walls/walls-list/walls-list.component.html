@@ -1,0 +1,30 @@
+  <section class="card">
+    <div class="card-content">
+      <div class="card-title">Authors</div>
+
+      <div class="two-across">
+        <div>
+          <label for="nameFilter">Name Filter</label>
+          <input
+            id="nameFilter"
+            type="text"
+            autocomplete="off"
+            [formControl]="nameFilter"
+          />
+        </div>
+
+      </div>
+      <div>
+
+      </div>
+      <walls
+      [list]="filteredList | async"
+
+      ></walls>
+    </div>
+  </section>
+
+  <!--<employee-detail-view
+    [employee]="selectedEmployee | async"
+  ></employee-detail-view>-->
+

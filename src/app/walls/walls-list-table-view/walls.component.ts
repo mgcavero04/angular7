@@ -1,10 +1,5 @@
-
-/* 301 Injectors */
 import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
-//import { HttpClient } from '@angular/common/http';
-import { Employee, WallsLoaderService } from './walls-loader.service';
-//const apiUrl = 'https://api.angularbootcamp.com/videos';
-
+import { Employee, WallsLoaderService } from '../../walls/walls-loader.service';
 @Component({
   selector: 'walls',
   templateUrl: './walls.component.html',
@@ -12,23 +7,18 @@ import { Employee, WallsLoaderService } from './walls-loader.service';
 })
 
 export class WallsComponent implements OnInit{
-  //@Input() videos: Video[] = [];
   empleados: Employee[] = [];
+  @Input() list: Employee[] = [];
   @Output() videoSelected = new EventEmitter<Employee>();
   selectedVideo: Employee;
-  constructor(svc: WallsLoaderService) {//301:calling the service
+  constructor(svc: WallsLoaderService) {
     svc
     .loadEmployees()
     .subscribe(empleados => (this.empleados = empleados));
-    /*http
-      .get<Employee[]>(apiUrl)
-      .subscribe(empleados => (this.empleados = empleados));*/ /*300: this is using http*/
-
-      }
-  //empleados = Employees;
-  //empleados = this.videos;
+  }
   ngOnInit(): void {
     this.selectedVideo = {
+      id: '',
       author: '',
       title: ''
     };
